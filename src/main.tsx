@@ -1,13 +1,18 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import HomePage from "./pages/HomePage";
+import LandingPage from "./pages/LandingPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MainLayout from "./components/Layouts/MainLayout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: (
+      <MainLayout>
+        <LandingPage />
+      </MainLayout>
+    ),
   },
 ]);
 

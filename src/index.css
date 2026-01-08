@@ -1,1 +1,96 @@
 @import "tailwindcss";
+@theme {
+    --color-primary: #146CB1;
+    --color-primary-dark: #0F4A7B;
+    --color-grey: #D0D9E5;
+    --color-grey-lighter: #F5F8FF;
+    --color-black-lighter: #5C718B;
+    --font-family-base: "Plus Jakarta Sans", sans-serif;
+    --font-family-medium: "Plus Jakarta Sans", sans-serif;
+    --font-family-semibold: "Plus Jakarta Sans", sans-serif;
+    --font-family-bold: "Plus Jakarta Sans", sans-serif;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("/src/assets/fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("/src/assets/fonts/PlusJakartaSans-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("/src/assets/fonts/PlusJakartaSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("/src/assets/fonts/PlusJakartaSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes marquee-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 10s linear infinite;
+}
+
+.animate-marquee-right {
+    animation: marquee-right 20s linear infinite;
+}
+
+.animate-marquee-left {
+    animation: marquee-left 20s linear infinite;
+}
+
+.hover\:pause-marquee:hover {
+    animation-play-state: paused;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
