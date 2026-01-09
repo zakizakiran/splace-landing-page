@@ -40,7 +40,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
       <button
         type="button"
         onClick={onToggle}
-        className="w-full p-6 flex items-start justify-between gap-4 text-left"
+        className="w-full p-6 flex items-start justify-between gap-4 text-left cursor-pointer"
         aria-expanded={isOpen}
       >
         <h3 className="font-bold text-base sm:text-lg text-black flex-1">
@@ -48,7 +48,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
         </h3>
 
         <div
-          className={`flex-shrink-0 transition-colors ${
+          className={`shrink-0 transition-colors ${
             isOpen ? "text-primary" : "text-grey"
           }`}
         >

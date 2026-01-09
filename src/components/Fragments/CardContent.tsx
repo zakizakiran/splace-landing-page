@@ -20,7 +20,7 @@ const CardContent: React.FC<CardContentProps> = ({
   fadeColor = "from-grey-lighter",
 }) => {
   return (
-    <div className="flex flex-col h-full p-6 pb-0">
+    <div className="cursor-pointer flex flex-col h-full p-6 pb-0">
       <div className="flex items-start gap-3 mb-2 text-start">
         {number && (
           <div className="w-6 h-6 text-white rounded-full flex items-center justify-center text-sm font-bold shrink-0 bg-primary">
